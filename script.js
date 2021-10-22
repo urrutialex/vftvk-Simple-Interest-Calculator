@@ -14,10 +14,10 @@ function compute()
 }}
 
 function updateRate(){
-    var slider = document.getElementById("myRange");
+    var rate = document.getElementById("myRange");
     var output = document.getElementById("demo");
     
-    output.innerHTML = slider.value + "%";
+    output.innerHTML = rate + "%";
 	
 }
        
