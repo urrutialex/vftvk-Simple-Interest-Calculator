@@ -6,11 +6,7 @@ function compute() {
   var year = new Date().getFullYear()+parseInt(years);
   var result = document.getElementById("result");
 
-  result.innerHTML =
-    "If you deposit" + principal + "," <br>
-    "at an interest rate of" + rate + "," <br>
-    "You will receive an amount of" + interest + " <br>
-    "in the year" + year + "!";
+  result.innerHTML = "If you deposit" + principal + "," <br> "at an interest rate of" + rate + "," <br> "You will receive an amount of" + interest + " <br> "in the year" + year + "!";
 
   var principal = document.getElementById("principal").value;
   if (principal <= 0) {
