@@ -3,8 +3,7 @@ function compute() {
   var rate = document.getElementById("rate").value;
   var years = document.getElementById("years").value;
   var interest = (principal * years * rate) / 100;
-
-  var futureless = parseInt(years) + 2020;
+  var year = new Date().getFullYear()+parseInt(years);
   var result = document.getElementById("result");
 
   result.innerHTML =
@@ -15,7 +14,7 @@ function compute() {
     "</span> <br> You will receive an amount of <span class='highlight'>" +
     interest +
     "</span>, <br> in the year <span class='highlight'>" +
-    futureless +
+    year +
     "</span>";
 
   var principal = document.getElementById("principal").value;
