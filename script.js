@@ -1,34 +1,32 @@
-function compute()
-{
-    var principal = document.getElementById('principal').value;
-    var rate = document.getElementById('rate').value;
-    var years = document.getElementById('years').value;
-    var result = document.getElementById('result');
-    // Reset result
-    result.innerHTML = '';
-    // Validate values first
-    if (!principal || principal <= 0) {
-        alert('Enter a positive number');
-        // Return focus as indicated in instructions
-        document.getElementById('principal').focus()
-        return;
-    }
-    // Calculate interest and year based on values
-    var interest = parseInt(principal) * parseInt(years) * parseFloat(rate) / 100;
-    var year = new Date().getFullYear() + parseInt(years);
-    // Don't calculate if either is not a number
-    if (isNaN(interest) || isNaN(year)) {
-        return
-    }
-    // Update result
-    result.innerHTML = 'If you deposit <div class="highlight">' +  principal + '</div>,<br>' + 
-        ' at an interest rate of <div class="highlight">' + rate + '%</div>. <br>' 
-        + 'You will receive an amount of <div class="highlight">' + interest + '</div>, <br>' 
-        + 'in the year <div class="highlight">' + year + '</div><br>';
+function compute() {
+  var principal = document.getElementById("principal").value;
+  var rate = document.getElementById("rate").value;
+  var years = document.getElementById("years").value;
+  var interest = (principal * years * rate) / 100;
+
+  var futureless = parseInt(years) + 2020;
+  var result = document.getElementById("result");
+
+  result.innerHTML =
+    "If you deposit <span class='highlight'>" +
+    principal +
+    "</span> ,<br> at an interest rate of <span class='highlight'>" +
+    rate +
+    "</span> <br> You will receive an amount of <span class='highlight'>" +
+    interest +
+    "</span>, <br> in the year <span class='highlight'>" +
+    futureless +
+    "</span>";
+
+  var principal = document.getElementById("principal").value;
+  if (principal <= 0) {
+    alert("Enter a positive number");
+    principal.focus();
+    return false;
+  }
 }
 
-function updateRate()
-{
-    var rateval = document.getElementById('rate').value;
-    document.getElementById('rate_val').innerText = rateval + '%';
-}        
+function setSliderLabel() {
+  var rate = document.getElementById("rate").value;
+  document.getElementById("rate_span").innerHTML = rate + "%";
+}
