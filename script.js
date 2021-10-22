@@ -4,14 +4,14 @@ function compute()
     var rate = document.getElementById("myRange").value;
     var years = document.getElementById("years").value;
     var interest = principal * years * rate/100;
-    var dueyear = new Date().getFullYear();
-	var myyr = Number(dueyear) + Number(years);
+    var year = new Date().getFullYear();
+	var atyear = Number(year) + Number(years);
 
     var displayresult = document.getElementById("result");
-    displayresult.innerText =  "If you deposit " + principal + "\n at an interest rate of " + rate + "%. \nYou will receive an interest of " + interest + "\nin the year " + myyr;
+    displayresult.innerText =  "If you deposit " + principal + "\n at an interest rate of " + rate + "%. \nYou will receive an interest of " + interest + "\nin the year " +atyear;
 }
 
-function getmyslider(){
+function updateRate(){
     var slider = document.getElementById("myRange");
     var output = document.getElementById("demo");
     
