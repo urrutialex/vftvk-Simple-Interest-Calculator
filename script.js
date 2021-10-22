@@ -7,8 +7,8 @@ function compute()
     var dueyear = new Date().getFullYear();
 	var myyr = Number(dueyear) + Number(years);
 
-    var displayresult = document.getElementById("result");
-    displayresult.innerText =  "If you deposit " + principal + "\n at an interest rate of " + rate + "%. \nYou will receive an interest of " + interest + "\nin the year " + myyr;
+    var result = document.getElementById("result");
+    result.innerText =  "If you deposit " + principal + "\n at an interest rate of " + rate + "%. \nYou will receive an interest of " + interest + "\nin the year " + myyr;
 }
 
 function updateRate(){
