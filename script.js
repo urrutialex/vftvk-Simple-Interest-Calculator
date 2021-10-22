@@ -11,7 +11,7 @@ function compute()
     displayresult.innerText =  "If you deposit " + principal + "\n at an interest rate of " + rate + "%. \nYou will receive an interest of " + interest + "\nin the year " + myyr;
 }
 
-function getmyslider(){
+function updateRate(){
     var slider = document.getElementById("myRange");
     var output = document.getElementById("demo");
     
