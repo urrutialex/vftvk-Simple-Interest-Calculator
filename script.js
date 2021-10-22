@@ -2,7 +2,7 @@ function compute()
 {
     var principal = document.getElementById("principal").value;
 	if (principal == 0){
-		alert("Positive values allowed only")
+		alert("Positive values allowed only");
 	}
     var rate = document.getElementById("myRange").value;
     var years = document.getElementById("years").value;
