@@ -1,15 +1,15 @@
 function compute()
 {
-    var principal = document.getElementById("principal").value;
+    principal = document.getElementById("principal").value;
     if (principal<=0) {
         alert("Enter a positive number");
         document.getElementById("principal").focus();
     }
     else{
-        var rate = document.getElementById("rate").value;
-        var years = document.getElementById("years").value;
-        var interest = principal * years * rate /100;
-        var year = new Date().getFullYear()+parseInt(years);
+        rate = document.getElementById("rate").value;
+        years = document.getElementById("years").value;
+        interest = principal * years * rate /100;
+        year = new Date().getFullYear()+parseInt(years);
         
         document.getElementById("result").innerHTML = "If you deposit ";
     }
@@ -17,8 +17,7 @@ function compute()
 
 function updateRate() 
 {
-    var rateval = document.getElementById("rate").value;
-    document.getElementById("rateval").innerText=rateval;
+    document.getElementById("rate").innerText=rate;
 }
 
 function valid()
