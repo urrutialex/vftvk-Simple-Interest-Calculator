@@ -7,7 +7,7 @@ function compute()
     interest = principal * years * rate /100;
     year = new Date().getFullYear()+parseInt(years);
         
-    document.getElementById("result").innerHTML = "If you deposit ";
+    document.getElementById("result").value;
     }
 }
 
