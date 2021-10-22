@@ -6,14 +6,12 @@ function compute()
     interest = principal * years * rate / 100
     actual_year = new Date().getFullYear()
     future_year = actual_year + Number(years)
-
-    if (validate_numer() == true) {
-        document.getElementById("result").innerHTML =
+    
+    document.getElementById("result").innerHTML =
     "If you deposit <mark>" + principal + "</mark>,<br />" +
     "at an interest rate of <mark>" + rate + "</mark>.<br />" +
     "You will receive an amount of <mark>" + interest + "</mark>,<br />" +
     "in the year <mark>" + future_year + "</mark>"
-    }
 }
 
 function read_value()
