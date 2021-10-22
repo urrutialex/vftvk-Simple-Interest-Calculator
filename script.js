@@ -7,8 +7,7 @@ function compute() {
   var result = document.getElementById("result");
 
   result.innerHTML =
-    "If you deposit" +
-    principal +
+    "If you deposit" + principal + ",!" <br>
     "at an interest rate of <span class='highlight'>" +
     rate +
     "</span> <br> You will receive an amount of <span class='highlight'>" +
