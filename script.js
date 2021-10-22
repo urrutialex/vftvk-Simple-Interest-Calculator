@@ -7,6 +7,7 @@ function compute()
     var year = new Date().getFullYear()+parseInt(years);
     var future_year = year + Number(years)
     
+    if (valid() == true) {
     p = document.getElementById("principal").value;
     document.getElementById("result").innerHTML =
     "If you deposit <mark>" + principal + "</mark>,<br />" +
@@ -21,4 +22,15 @@ function updateRate()
     var rate_val = document.getElementById("rate").value;
     document.getElementById("rate_val").innerText=rateval;
 }
+
+function valid()
+{
+    amount = document.getElementById("principal").value;
+
+    if (amount <= 0) {
+        alert('Enter a positive number!')
+        document.getElementById("principal").focus()
+        return false
+    }
+
         
