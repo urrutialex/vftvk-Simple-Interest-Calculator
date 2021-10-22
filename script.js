@@ -1,20 +1,29 @@
+document.title = 'Web App – Simple Interest Calculator';
+var yearing = new Date().getFullYear();
+var drip = document.getElementById("years");
+var slider = document.getElementById("rate");
+var principal = document.getElementById("principal");
+var output = document.getElementById("dum");
+var percent = "%";
+output.innerHTML = slider.value;
 
-   
-function compute()
-{
-    let principal = document.getElementById("principal").value;
-   if (principal<=0){window.alert("Enter a positive number");}
-    let rate = document.getElementById("rate").value;
-    let years = document.getElementById("years").value;
-    let interest = principal * years * rate / 100;
-    let actual_year = years + 2021;
-    document.getElementById("result").innerHTML =  "If you deposit <mark>" + principal + "</mark>,<br />" +
-        "at an interest rate of <mark>" + rate + "</mark>.<br />" +
-        "You will receive an amount of <mark>" + interest + "</mark>,<br />" +
-        "in the year <mark>" + actual_year + "</mark>";
+slider.oninput = function() {
+  output.innerHTML = slider.value;
 }
-function range_display()
-{
-    let rate = document.getElementById("rate").value;
-    document.getElementById("range").innerText = rate;
-}    
+//Formula for Interest Rate is Final = Amount(1+Interest Rate*No. of Years)
+function compute() {
+  const p = principal.value;
+  const r = slider.value / 100;
+  const t = drip.value;
+  const interest = p * r * t;
+  const needed = slider.value;
+  if (p <= 0) {
+  alert('Please enter a positive number.')
+  principal.focus();
+  }
+  if (p.length = 0) {
+  alert('Please enter a positive number.')
+  }
+  yearee = parseInt(yearing) + parseInt(t);
+  alert('If you deposit ' + p + ' at an interest rate of ' + needed + percent + ' you will recieve an amount of ' + interest + ' in the year ' + yearee + '.');
+}
