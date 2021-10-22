@@ -7,8 +7,7 @@ function compute()
     var year = new Date().getFullYear()+parseInt(years);
     var future_year = year + Number(years)
     
-    if (valid() == true) {
-    p = document.getElementById("principal").value;
+    document.getElementById("principal").value;
     document.getElementById("result").innerHTML =
     "If you deposit <mark>" + principal + "</mark>,<br />" +
     "at an interest rate of <mark>" + rate + "</mark>.<br />" +
