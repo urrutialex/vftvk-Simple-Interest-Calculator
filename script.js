@@ -1,5 +1,3 @@
-
-
 function compute()
 {
     var principal = document.getElementById("principal").value;
@@ -7,12 +5,7 @@ function compute()
     var years = document.getElementById("years").value;
     var interest = principal * years * rate /100;
     var year = new Date().getFullYear()+parseInt(years);
-    
-    
-    
-    
-    
-    
+    var future_year = year + Number(years)
     
     p = document.getElementById("principal").value;
     document.getElementById("result").innerHTML =
