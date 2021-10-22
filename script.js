@@ -7,14 +7,10 @@ function compute() {
   var result = document.getElementById("result");
 
   result.innerHTML =
-    "If you deposit" + principal + ",!" <br>
-    "at an interest rate of <span class='highlight'>" +
-    rate +
-    "</span> <br> You will receive an amount of <span class='highlight'>" +
-    interest +
-    "</span>, <br> in the year <span class='highlight'>" +
-    year +
-    "</span>";
+    "If you deposit" + principal + "," <br>
+    "at an interest rate of" + rate + "," <br>
+    "You will receive an amount of" + interest + " <br>
+    "in the year" + year + "!";
 
   var principal = document.getElementById("principal").value;
   if (principal <= 0) {
