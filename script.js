@@ -15,7 +15,7 @@ function updateRate(){
     var rate = document.getElementById("myRange");
     var output = document.getElementById("demo");
     
-    output.innerHTML = slider.rate + "%";
+    output.innerHTML = rate.value + "%";
 	
 }
    
