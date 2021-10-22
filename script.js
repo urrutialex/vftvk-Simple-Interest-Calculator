@@ -6,11 +6,10 @@ function compute()
    	var year = new Date().getFullYear();
 	var byyear = Number(year) + Number(years);
 	var principal = document.getElementById("principal").value;
+	var result = document.getElementById("result");
 	if principal <= 0 {
 		alert("Please enter a positive value");
 	} else {
-	
-	var result = document.getElementById("result");
 		result.innerText =  "If you deposit " + principal + "\n at an interest rate of " + rate + "%. \nYou will receive an interest of " + interest + "\nin the year " + byyear;
 }}
 
